@@ -114,8 +114,11 @@ def main():
         start_time = MPI.Wtime()
         dispatcher(comm, particles_0)
         end_time = MPI.Wtime()
-
-        print(f"run time with parallelization: {end_time - start_time:.3f} seconds")
+        para_rt = end_time - start_time
+        serial_rt = 1500
+        print(f"run time with parallelization: {para_rt:.3f} seconds\n
+                run time with serial: {serial_rt:.3f} seconds\n
+                speed up: {para_rt/serial_rt:.3f}")
     else:
         run(comm)
 
