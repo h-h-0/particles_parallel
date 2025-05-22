@@ -3,6 +3,7 @@
 
 # sim.py: Main program for the simulation
 
+# github link: https://github.com/h-h-0/particles_parallel
 import numpy as np
 import eqnmotion
 import box
